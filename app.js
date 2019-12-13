@@ -3,7 +3,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 
-const users = require('./src/routes/users');
+const healthcheck = require('./src/routes/healthcheck');
+const registerRouter = require('./src/routes/register');
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use('/api/v1/users', users);
+app.use('/v1/healthcheck', healthcheck);
+app.use('/v1/register', registerRouter);
 
 module.exports = app;
