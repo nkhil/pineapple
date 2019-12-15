@@ -1,5 +1,4 @@
 const firebase = require('firebase/app');
-const { createCustomToken } = require('./');
 
 require('firebase/auth');
 require('firebase/firestore');
@@ -17,7 +16,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 async function authenticate(email, password) {
-  console.log('\n AUTHENTICATE FUNCTION HIT\n');
   try {
     const { user } = await firebase.auth().signInWithEmailAndPassword(email, password);
     if (user) {
@@ -25,6 +23,7 @@ async function authenticate(email, password) {
     }
     return false;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.log('ERROR=>', error);
   }
 }

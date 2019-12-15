@@ -5,7 +5,6 @@ const router = express.Router();
 
 router.post('/', async function(req, res, next) {
   try {
-    console.log('LOGIN ROUTER HIT');
     const { email, password } = req.body;
     const user = await authenticate(email, password);
     if (user) {
