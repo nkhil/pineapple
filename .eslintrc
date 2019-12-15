@@ -10,6 +10,16 @@
         "printWidth": 120,
         "tabWidth": 2
       }
+    ],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "never",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "only-multiline"
+      }
     ]
   }
 }
