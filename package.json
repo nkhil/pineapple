@@ -8,10 +8,10 @@
     "lint": "eslint app.js src"
   },
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "cookie-parser": "~1.3.5",
     "cors": "^2.8.5",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "firebase": "^7.6.0",
     "firebase-admin": "^8.8.0",
     "nodemon": "^2.0.2"
